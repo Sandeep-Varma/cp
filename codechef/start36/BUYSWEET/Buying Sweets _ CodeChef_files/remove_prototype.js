@@ -1,0 +1,1 @@
+(function(){window.EmberENV={};EmberENV.EXTEND_PROTOTYPES={Array:false,Function:true,String:true}})();

@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/dsv/codeforces/Edu129div2'
+g++ b_card_trick.cpp -o exec
+ 
+./exec < in.txt
+make: Leaving directory '/home/dsv/codeforces/Edu129div2'
+ 

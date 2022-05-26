@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/dsv/codechef/ltime108'
+g++ e_mxmodsum.cpp -o exec
+./exec < in.txt
+make: Leaving directory '/home/dsv/codechef/ltime108'
+ 

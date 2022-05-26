@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://www.codechef.com/START36A/problems/BUYSWEET -->
+<html lang="en" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <style>
+    .tokenForContest {
+      width: 150px;
+      margin:0 auto;
+      text-align: center;
+    }
+    .text-center{
+      text-align: center;
+    }
+  </style>
+  <script src="./Buying Sweets _ CodeChef_files/4e7c8fce06a9ab05530008e5.js" async=""></script><script async="" src="./Buying Sweets _ CodeChef_files/clarity.js"></script><script async="" src="./Buying Sweets _ CodeChef_files/3wyy3fxv0y"></script><script type="text/javascript" async="" src="./Buying Sweets _ CodeChef_files/analytics.js"></script><script type="text/javascript" async="" src="./Buying Sweets _ CodeChef_files/js"></script><script async="" src="./Buying Sweets _ CodeChef_files/fbevents.js"></script><script async="" src="./Buying Sweets _ CodeChef_files/gtm.js"></script><script type="text/x-mathjax-config;executed=true">
+    MathJax.Hub.Config({
+      "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+      },
+      ShowMathMenu: false,
+      TeX: {
+        extensions: ["color.js"],
+        noUndefined: {
+          attributes: {
+            mathcolor: "red",
+            mathbackground: "#FFEEEE",
+            mathsize: "90%"
+          }
+        },
+        Macros: { href: "{}" }
+      },
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [ ["$$","$$"], ["\\[", "\\]"] ],
+        multiline: true,
+        processEscapes: true,
+        ignoreClass: "[a-zA-Z1-9]*",
+        processClass: "mathjax-support"
+      },
+      menuSettings: {
+        context: "Browser"
+      },
+      messageStyle: "none"
+    });
+    </script>
+
+
+    <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TV5X2M');
+        </script>
+    <!-- End Google Tag Manager -->
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2444182835820350');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1"
+         src="https://www.facebook.com/tr?id=2444182835820350&ev=PageView
+&noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <script src="./Buying Sweets _ CodeChef_files/optimize.js"></script>
+
+  <script type="text/javascript" src="./Buying Sweets _ CodeChef_files/MathJax.js">
+  </script>
+
+  <script type="text/javascript" src="./Buying Sweets _ CodeChef_files/showdown.min.js">
+  </script>
+  <script>
+    (function (_, e, rr, s) {
+      _errs = [s];
+      var c = _.onerror;
+      _.onerror = function () {
+        var a = arguments;
+        _errs.push(a);
+        c && c.apply(this, a)
+      };
+      var b = function () {
+        var c = e.createElement(rr),
+                b = e.getElementsByTagName(rr)[0];
+        c.src = "//beacon.errorception.com/" + s + ".js";
+        c.async = !0;
+        b.parentNode.insertBefore(c, b)
+      };
+      _.addEventListener ? _.addEventListener("load", b, !1) : _.attachEvent("onload", b)
+    })
+    (window, document, "script", "4e7c8fce06a9ab05530008e5");
+  </script>
+  <link rel="dns-prefetch" href="https://codechef_shared.s3.amazonaws.com/">
+  <link rel="dns-prefetch" href="https://beacon.errorception.com/">
+  <link rel="dns-prefetch" href="https://static.ak.facebook.com/">
+  <link rel="dns-prefetch" href="https://fbcdn-profile-a.akamaihd.net/">
+  <script type="text/javascript">
+    var _sf_startpt = (new Date()).getTime()
+  </script>
+  <title>Buying Sweets | CodeChef</title>
+  
+  <meta name="keywords" content="programming, language, algorithm, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+    <meta name="robots" content="index, follow">
+    <link rel="shortcut icon" href="https://cdn.codechef.com/favicon.ico" type="image/x-icon">
+    <script src="./Buying Sweets _ CodeChef_files/platform.js" async="" defer="" gapi_processed="true"></script>
+    <script src="./Buying Sweets _ CodeChef_files/remove_prototype.js"></script>
+    <script src="./Buying Sweets _ CodeChef_files/jquery.min.js"></script>
+    <script src="./Buying Sweets _ CodeChef_files/contest-problem.js"></script>
+    <link rel="stylesheet" href="./Buying Sweets _ CodeChef_files/contest-problem.css">
+    <link href="./Buying Sweets _ CodeChef_files/css2" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./Buying Sweets _ CodeChef_files/mallow-footer.css"><link rel="canonical" href="https://www.codechef.com/START36A"><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.alert-box p { font-size: 16px; }</style><meta name="description" content="Participate in the coding contest CodeChef Starters 36 Division 1(Unrated) to better your competitive programming skills. Compete now and improve your rankings."><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax_LineBox {display: table!important}
+.MathJax_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?V=2.7.3') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?V=2.7.3') format('opentype')}
+@font-face {font-family: MathJax_Main-bold; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?V=2.7.3') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?V=2.7.3') format('opentype')}
+@font-face {font-family: MathJax_Main-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?V=2.7.3') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?V=2.7.3') format('opentype')}
+@font-face {font-family: MathJax_Math-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?V=2.7.3') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?V=2.7.3') format('opentype')}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?V=2.7.3') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?V=2.7.3') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?V=2.7.3') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?V=2.7.3') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?V=2.7.3') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?V=2.7.3') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?V=2.7.3') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?V=2.7.3') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.3') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.3') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><meta name="description" content="Participate in the coding contest CodeChef Starters 36 Division 1(Unrated) to better your competitive programming skills. Compete now and improve your rankings."></head>
+
+<body class="sidebar-right" data-new-gr-c-s-check-loaded="14.1058.0" data-gr-ext-installed=""><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+<script>window.csrfToken = '967d062b3feeda8bd4afb01a8e38565adfc28bb29764f631d617271fcbf3f34c';</script><div id="ember-root" class="ember-application">
+
+  
+  <!--#application handlebars template-->
+
+  
+  <!--#recentActivityRow handlebars template-->
+
+  
+  <!--#contestPageRow handlebars template-->
+
+  
+  <!--#singleRow handlebars template-->
+
+  
+  <!--#contestPage handlebars template-->
+
+  
+  <!--#problemPage handlebars template-->
+<div id="ember256" class="ember-view">
+    <section class="topbar">
+      <div class="row">
+        <div class="small-12 columns">
+          <ul class="inline-list right social-login">
+            
+            
+            <li class="loggedin-user no-select">
+
+                <span class="left">
+                    <a href="https://www.codechef.com/users/sandeep_1248"><div class="picture"><img src="./Buying Sweets _ CodeChef_files/user_default_thumb.jpg" width="30px" height="30px" alt="User Profile"></div> </a>
+                </span>
+
+              <span class="right">
+                  Hello <a>sandeep_1248<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                  <ul class="user-dropdown" style="display: none;">
+                    <span class="caret"></span>
+                    <li><a href="https://www.codechef.com/users/sandeep_1248">Account</a></li>
+                    <li><a href="https://www.codechef.com/users/sandeep_1248/edit">Edit Profile</a></li>
+                    <li><a href="https://www.codechef.com/contests/dashboard?tab=mashup-contests">My Mashups</a></li>
+                    <li><a href="https://goodies.codechef.com/my-laddus/">My Laddus</a></li>
+                    <li><a href="https://www.codechef.com/apps">My Apps</a></li>
+                    <li><a href="https://www.codechef.com/todos">My Todos</a></li>
+                    <li><a href="https://www.codechef.com/sets">My Sets</a></li>
+                    <li><a href="https://www.codechef.com/problems/dashboard">My Problems</a></li>
+                    <li><a href="https://www.codechef.com/certificates">My Certificates</a></li>
+                      
+                          <li><a href="https://www.codechef.com/users/sandeep_1248/teams">My Teams</a></li>
+                    <li><a href="https://www.codechef.com/teams/invites">Team Invites</a></li>
+                      
+                      <li><a href="https://www.codechef.com/referral">Referrals</a></li>
+                      <li>
+                        <a href="https://www.codechef.com/certification/data-structures-and-algorithms/dashboard">Certifications Dashboard</a>
+                      </li>
+                  </ul>
+                </span>
+            </li>
+            <li class="todo-section notification-box-todo" title="My Todo List">
+              <i></i>
+              <span class="notification-listbox"></span>
+            </li>
+
+            
+
+            
+                
+            
+            <!--#facebook-login-->
+
+            
+            <a id="logout-btn" href="https://www.codechef.com/logout" class="button grey logout-link">Logout</a>
+            
+            
+          </ul>
+          <div id="custom-login"></div>
+        </div>
+      </div>
+    </section>
+    <!--.topbar-->
+
+    <header class="site">
+      <div class="row">
+        <div class="small-12 columns">
+          <p class="cc-img">
+            <a href="https://www.codechef.com/" title=""><img src="./Buying Sweets _ CodeChef_files/cc-logo.svg" alt="CodeChef is a competitive programming community" id="logo"><span></span></a>
+          </p>
+          <nav class="right">
+            <div id="block-nice_menus-1" class="block block-nice_menus block-header">
+              <div class="content">
+                 <ul class="nice-menu nice-menu-down" id="nice-menu-0"><li id="menu-302" class="menuparent menu-path-https--www.codechef.com-practiceitm_mediumnavmenuitm_campaignproblems_head"><a href="https://www.codechef.com/practice?itm_medium=navmenu&amp;itm_campaign=problems_head" title="">PRACTICE</a><ul><li id="menu-303" class="menu-path-https--www.codechef.com-practiceitm_mediumnavmenuitm_campaignproblems"><a href="https://www.codechef.com/practice??itm_medium=navmenu&amp;itm_campaign=problems" title="">Practice Problems</a></li>
+<li id="menu-5215" class="menu-path-https--www.codechef.com-ideitm_mediumnavmenuitm_campaignide"><a href="https://www.codechef.com/ide?itm_medium=navmenu&amp;itm_campaign=ide" title="">Code, Compile &amp; Run (IDE)</a></li>
+</ul>
+</li>
+<li id="menu-309" class="menuparent menu-path-https--www.codechef.com-contests-itm_mediumnavmenuitm_campaignallcontests_head"><a href="https://www.codechef.com/contests/?itm_medium=navmenu&amp;itm_campaign=allcontests_head" title="">COMPETE</a><ul><li id="menu-10108" class="menu-path-https--www.codechef.com-COOK141itm_campaignnavmenu"><a href="https://www.codechef.com/COOK141?itm_campaign=navmenu" title="">May Cook-Off 2022 (Rated for All)</a></li>
+<li id="menu-5679" class="menu-path-https--www.codechef.com-START37-itm_mediumnavmenuitm_campaignSTART37"><a href="https://www.codechef.com/START37/?itm_medium=navmenu&amp;itm_campaign=START37" title="">CodeChef Starters 37</a></li>
+<li id="menu-5225" class="menu-path-https--www.codechef.com-START36-itm_mediumnavmenuitm_campaignSTART36"><a href="https://www.codechef.com/START36/?itm_medium=navmenu&amp;itm_campaign=START36" title="">CodeChef Starters 36</a></li>
+<li id="menu-2203" class="menu-path-https--www.codechef.com-contests-itm_mediumnavmenuitm_campaignallcontests"><a href="https://www.codechef.com/contests/?itm_medium=navmenu&amp;itm_campaign=allcontests" title="">All Contests</a></li>
+<li id="menu-1820" class="menu-path-https--www.codechef.com-event-calendar-itm_mediumnavmenuitm_campaigncalendar"><a href="https://www.codechef.com/event-calendar/?itm_medium=navmenu&amp;itm_campaign=calendar" title="Event Calendar">Contest Calendar</a></li>
+</ul>
+</li>
+<li id="menu-138" class="menuparent menu-path-https--www.codechef.com-learningitm_mediumnavmenuitm_campaigndiscuss_head"><a href="https://www.codechef.com/learning?itm_medium=navmenu&amp;itm_campaign=discuss_head" title="">LEARN</a><ul><li id="menu-715" class="menu-path-https--www.codechef.com-selflearningitm_mediumnavmenuitm_campaignlearncp"><a href="https://www.codechef.com/selflearning?itm_medium=navmenu&amp;itm_campaign=learncp" title="">Self Learning</a></li>
+<li id="menu-9894" class="menu-path-https--www.codechef.com-learningitm_mediumnavmenuitm_campaignlearncp"><a href="https://www.codechef.com/learning?itm_medium=navmenu&amp;itm_campaign=learncp" title="">Mentored Learning</a></li>
+</ul>
+</li>
+<li id="menu-143" class="menuparent menu-path-https--discuss.codechef.comitm_mediumnavmenuitm_campaignproblems_head"><a href="https://discuss.codechef.com/?itm_medium=navmenu&amp;itm_campaign=problems_head" title="">DISCUSS</a><ul><li id="menu-139" class="menu-path-https--discuss.codechef.com-itm_mediumnavmenuitm_campaigndiscuss"><a href="https://discuss.codechef.com/?itm_medium=navmenu&amp;itm_campaign=discuss" title="">Discussion Forum</a></li>
+<li id="menu-140" class="menu-path-https--blog.codechef.com-itm_mediumnavmenuitm_campaignblog"><a href="https://blog.codechef.com/?itm_medium=navmenu&amp;itm_campaign=blog" title="">CodeChef Blog</a></li>
+</ul>
+</li>
+<li id="menu-147" class="menuparent menu-path-https--www.codechef.com-corporates"><a href="https://www.codechef.com/corporates" title="">ASSOCIATE WITH US</a><ul><li id="menu-146" class="menu-path-https--www.codechef.com-corporatesitm_mediumnavmenuitm_campaignbusiness"><a href="https://www.codechef.com/corporates?itm_medium=navmenu&amp;itm_campaign=business" title="">Business Partnerships</a></li>
+<li id="menu-1389" class="menu-path-https--www.codechef.com-problemsetting-itm_mediumnavmenuitm_campaignproblemsetting"><a href="https://www.codechef.com/problemsetting/?itm_medium=navmenu&amp;itm_campaign=problemsetting" title="Codechef Problem Creation">Become a Problem Setter</a></li>
+<li id="menu-850" class="menu-path-https--www.codechef.com-contactus-itm_mediumnavmenuitm_campaigncontactus"><a href="https://www.codechef.com/contactus/?itm_medium=navmenu&amp;itm_campaign=contactus" title="">Contact Us</a></li>
+<li id="menu-9149" class="menu-path-https--www.codechef.com-workwithusitm_mediumnavmenuitm_campaignworkwithus"><a href="https://www.codechef.com/workwithus?itm_medium=navmenu&amp;itm_campaign=workwithus" title="">Work with CodeChef</a></li>
+</ul>
+</li>
+<li id="menu-5681" class="menuparent menu-path-https--www.codechef.com-ratings-all"><a href="https://www.codechef.com/ratings/all" title="">MORE</a><ul><li id="menu-827" class="menu-path-https--www.codechef.com-getting-starteditm_mediumnavmenuitm_campaigngetstarted"><a href="https://www.codechef.com/getting-started?itm_medium=navmenu&amp;itm_campaign=getstarted" title="">Get Started at CodeChef</a></li>
+<li id="menu-1312" class="menu-path-https--certifications.codechef.com-data-structures-and-algorithmsitm_mediumnavmenuitm_campaignccdsap"><a href="https://certifications.codechef.com/data-structures-and-algorithms?itm_medium=navmenu&amp;itm_campaign=ccdsap" title="CCDSA">CodeChef DSA Certification</a></li>
+<li id="menu-708" class="menu-path-https--www.codechef.com-ratings-all-itm_mediumnavmenuitm_campaignratings"><a href="https://www.codechef.com/ratings/all/?itm_medium=navmenu&amp;itm_campaign=ratings" title="">Top Rated Users</a></li>
+<li id="menu-2310" class="menu-path-https--www.codechef.com-our-initiatives-itm_mediumnavmenuitm_campaigngoforgold"><a href="https://www.codechef.com/our-initiatives/?itm_medium=navmenu&amp;itm_campaign=goforgold" title="">Our Initiatives</a></li>
+<li id="menu-6030" class="menu-path-https--goodies.codechef.com-itm_mediumnavmenuitm_campaigngoodies"><a href="https://goodies.codechef.com/?itm_medium=navmenu&amp;itm_campaign=goodies" title="">CodeChef Goodies</a></li>
+<li id="menu-643" class="menu-path-https--www.codechef.com-wiki-faq-itm_mediumnavmenuitm_campaignfaq"><a href="https://www.codechef.com/wiki/faq/?itm_medium=navmenu&amp;itm_campaign=faq" title="">Frequently Asked Questions</a></li>
+<li id="menu-304" class="menu-path-https--www.codechef.com-wiki-itm_mediumnavmenuitm_campaignwiki"><a href="https://www.codechef.com/wiki/?itm_medium=navmenu&amp;itm_campaign=wiki" title="">CodeChef Wiki</a></li>
+<li id="menu-151" class="menu-path-https--www.codechef.com-aboutus-itm_mediumnavmenuitm_campaignaboutus"><a href="https://www.codechef.com/aboutus/?itm_medium=navmenu&amp;itm_campaign=aboutus" title="">About Us</a></li>
+</ul>
+</li>
+</ul>
+ 
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!--.site header-->
+    <div id="ember665" class="ember-view">
+    <main class="problem-container contest-container content" id="content-regions">
+      
+
+      <div>
+        <aside class="breadcrumbs">
+          <a href="https://www.codechef.com/">Home</a>&nbsp;»&nbsp;<a href="https://www.codechef.com/contests/">Compete</a>&nbsp;»&nbsp;<a id="ember678" class="ember-view" href="https://www.codechef.com/START36A?order=desc&amp;sortBy=successful_submissions">CodeChef Starters 36 Division 1(Unrated)</a>
+          &nbsp;»&nbsp;Buying Sweets
+        </aside>
+      </div>
+
+      <header>
+        <div class="row collapse">
+          <div class="large-12 columns">
+            <h1>
+              Buying Sweets
+              <span>Problem Code: <strong id="problem-code">BUYSWEET</strong></span>
+              <i class="icon-add-todo right">
+                
+                <div class="todo-widget" style="visibility: visible; position: relative;top: 5px;"><input style="outline: none;" type="image" src="./Buying Sweets _ CodeChef_files/add1.png" title="Add problem to Todo list" class="todo-button" width="25" height="25" problem="BUYSWEET" contest="START36A"><div class="todo-button-message"></div></div>
+                
+              </i>
+              
+              
+              <a class="button blue right" href="https://www.codechef.com/submit/BUYSWEET" data-bindattr-682="682">Submit
+                (Practice)</a>
+              
+              
+            </h1>
+          <div class="clearfix"></div>
+        </div>
+      </div></header>
+
+      <section class="content-area small-8 columns pl0">
+        <div class="problem-statement mathjax-support" id="problem-statement">
+          
+            <p class=" mathjax-support">There are <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-26-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-158" style="width: 1.15em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.932em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1000.93em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-159"><span class="mi" id="MathJax-Span-160" style="font-family: MathJax_Math-italic;">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.112em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.937em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></span></span><script type="math/tex" id="MathJax-Element-26">N</script> sweets in the store. The cost of the <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-27-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;h&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-161" style="width: 1.369em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.15em, 1001.1em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-162"><span class="msubsup" id="MathJax-Span-163"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(3.172em, 1000.33em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-164" style="font-family: MathJax_Math-italic;">i</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -4.369em; left: 0.331em;"><span class="texatom" id="MathJax-Span-165"><span class="mrow" id="MathJax-Span-166"><span class="mi" id="MathJax-Span-167" style="font-size: 70.7%; font-family: MathJax_Math-italic;">t</span><span class="mi" id="MathJax-Span-168" style="font-size: 70.7%; font-family: MathJax_Math-italic;">h</span></span></span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 1.203em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>i</mi><mrow class="MJX-TeXAtom-ORD"><mi>t</mi><mi>h</mi></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-27">i^{th}</script> sweet is <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-28-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-169" style="width: 1.369em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.314em, 1001.1em, 2.516em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-170"><span class="msubsup" id="MathJax-Span-171"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(3.117em, 1000.71em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-172" style="font-family: MathJax_Math-italic;">A</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -3.822em; left: 0.768em;"><span class="mi" id="MathJax-Span-173" style="font-size: 70.7%; font-family: MathJax_Math-italic;">i</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.203em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>A</mi><mi>i</mi></msub></math></span></span><script type="math/tex" id="MathJax-Element-28">A_i</script> rupees. Chef is a regular customer, so <strong class=" mathjax-support">after</strong> buying the <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-29-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;h&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-174" style="width: 1.369em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.15em, 1001.1em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-175"><span class="msubsup" id="MathJax-Span-176"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(3.172em, 1000.33em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-177" style="font-family: MathJax_Math-italic;">i</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -4.369em; left: 0.331em;"><span class="texatom" id="MathJax-Span-178"><span class="mrow" id="MathJax-Span-179"><span class="mi" id="MathJax-Span-180" style="font-size: 70.7%; font-family: MathJax_Math-italic;">t</span><span class="mi" id="MathJax-Span-181" style="font-size: 70.7%; font-family: MathJax_Math-italic;">h</span></span></span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 1.203em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>i</mi><mrow class="MJX-TeXAtom-ORD"><mi>t</mi><mi>h</mi></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-29">i^{th}</script> sweet, he gets a <strong class=" mathjax-support">cashback</strong> of <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-30-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-182" style="width: 1.369em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1001.1em, 2.516em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-183"><span class="msubsup" id="MathJax-Span-184"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(3.172em, 1000.77em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-185" style="font-family: MathJax_Math-italic;">B</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -3.822em; left: 0.768em;"><span class="mi" id="MathJax-Span-186" style="font-size: 70.7%; font-family: MathJax_Math-italic;">i</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.137em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>B</mi><mi>i</mi></msub></math></span></span><script type="math/tex" id="MathJax-Element-30">B_i</script> rupees.</p>
+<p class=" mathjax-support">Chef has <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-31-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-187" style="width: 0.932em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.768em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1000.77em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-188"><span class="mi" id="MathJax-Span-189" style="font-family: MathJax_Math-italic;">R</span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 1.003em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi></math></span></span><script type="math/tex" id="MathJax-Element-31">R</script> rupees. He is fond of all the sweets, so he wants you to calculate the maximum number of sweets he can buy. Note that he can buy the same type of sweet multiple times, as long as he has the money to do so.</p>
+            
+                
+                    <h3 class=" mathjax-support">Input Format</h3>
+                    <ul class=" mathjax-support">
+<li class=" mathjax-support">The first line of input will contain <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-32-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-190" style="width: 0.877em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.713em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1000.71em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-191"><span class="mi" id="MathJax-Span-192" style="font-family: MathJax_Math-italic;">T<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.112em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.937em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>T</mi></math></span></span><script type="math/tex" id="MathJax-Element-32">T</script>, the number of test cases.</li>
+<li class=" mathjax-support">Each test case consists of three lines of input.</li>
+<li class=" mathjax-support">The first line of each test case contains two space-separated integers <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-33-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-193" style="width: 1.15em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.932em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1000.93em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-194"><span class="mi" id="MathJax-Span-195" style="font-family: MathJax_Math-italic;">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.112em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.937em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></span></span><script type="math/tex" id="MathJax-Element-33">N</script> and <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-34-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-196" style="width: 0.932em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.768em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1000.77em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-197"><span class="mi" id="MathJax-Span-198" style="font-family: MathJax_Math-italic;">R</span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 1.003em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi></math></span></span><script type="math/tex" id="MathJax-Element-34">R</script> — the number of sweets in the shop and the amount of money Chef has.</li>
+<li class=" mathjax-support">The second line of each test case contains <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-35-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-199" style="width: 1.15em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.932em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1000.93em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-200"><span class="mi" id="MathJax-Span-201" style="font-family: MathJax_Math-italic;">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.112em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.937em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></span></span><script type="math/tex" id="MathJax-Element-35">N</script> space-separated integers <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-36-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo&gt;&amp;#x2026;&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-202" style="width: 8.036em; display: inline-block;"><span style="display: inline-block; position: relative; width: 6.56em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.314em, 1006.56em, 2.571em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-203"><span class="msubsup" id="MathJax-Span-204"><span style="display: inline-block; position: relative; width: 1.205em; height: 0px;"><span style="position: absolute; clip: rect(3.117em, 1000.71em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-205" style="font-family: MathJax_Math-italic;">A</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -3.822em; left: 0.768em;"><span class="mn" id="MathJax-Span-206" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span><span class="mo" id="MathJax-Span-207" style="font-family: MathJax_Main;">,</span><span class="msubsup" id="MathJax-Span-208" style="padding-left: 0.167em;"><span style="display: inline-block; position: relative; width: 1.205em; height: 0px;"><span style="position: absolute; clip: rect(3.117em, 1000.71em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-209" style="font-family: MathJax_Math-italic;">A</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -3.822em; left: 0.768em;"><span class="mn" id="MathJax-Span-210" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span><span class="mo" id="MathJax-Span-211" style="font-family: MathJax_Main;">,</span><span class="mo" id="MathJax-Span-212" style="font-family: MathJax_Main; padding-left: 0.167em;">…</span><span class="mo" id="MathJax-Span-213" style="font-family: MathJax_Main; padding-left: 0.167em;">,</span><span class="msubsup" id="MathJax-Span-214" style="padding-left: 0.167em;"><span style="display: inline-block; position: relative; width: 1.478em; height: 0px;"><span style="position: absolute; clip: rect(3.117em, 1000.71em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-215" style="font-family: MathJax_Math-italic;">A</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -3.822em; left: 0.768em;"><span class="mi" id="MathJax-Span-216" style="font-size: 70.7%; font-family: MathJax_Math-italic;">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.057em;"></span></span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.33em; border-left: 0px solid; width: 0px; height: 1.27em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><msub><mi>A</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>A</mi><mi>N</mi></msub></math></span></span><script type="math/tex" id="MathJax-Element-36">A_1, A_2, \ldots, A_N</script>.</li>
+<li class=" mathjax-support">The third line of each test case contains <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-37-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-217" style="width: 1.15em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.932em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1000.93em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-218"><span class="mi" id="MathJax-Span-219" style="font-family: MathJax_Math-italic;">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.112em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.937em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></span></span><script type="math/tex" id="MathJax-Element-37">N</script> space-separated integers <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-38-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo&gt;&amp;#x2026;&lt;/mo&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-220" style="width: 8.036em; display: inline-block;"><span style="display: inline-block; position: relative; width: 6.56em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1006.56em, 2.571em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-221"><span class="msubsup" id="MathJax-Span-222"><span style="display: inline-block; position: relative; width: 1.205em; height: 0px;"><span style="position: absolute; clip: rect(3.172em, 1000.77em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-223" style="font-family: MathJax_Math-italic;">B</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -3.822em; left: 0.768em;"><span class="mn" id="MathJax-Span-224" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span><span class="mo" id="MathJax-Span-225" style="font-family: MathJax_Main;">,</span><span class="msubsup" id="MathJax-Span-226" style="padding-left: 0.167em;"><span style="display: inline-block; position: relative; width: 1.205em; height: 0px;"><span style="position: absolute; clip: rect(3.172em, 1000.77em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-227" style="font-family: MathJax_Math-italic;">B</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -3.822em; left: 0.768em;"><span class="mn" id="MathJax-Span-228" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span><span class="mo" id="MathJax-Span-229" style="font-family: MathJax_Main;">,</span><span class="mo" id="MathJax-Span-230" style="font-family: MathJax_Main; padding-left: 0.167em;">…</span><span class="mo" id="MathJax-Span-231" style="font-family: MathJax_Main; padding-left: 0.167em;">,</span><span class="msubsup" id="MathJax-Span-232" style="padding-left: 0.167em;"><span style="display: inline-block; position: relative; width: 1.478em; height: 0px;"><span style="position: absolute; clip: rect(3.172em, 1000.77em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-233" style="font-family: MathJax_Math-italic;">B</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -3.822em; left: 0.768em;"><span class="mi" id="MathJax-Span-234" style="font-size: 70.7%; font-family: MathJax_Math-italic;">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.057em;"></span></span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.33em; border-left: 0px solid; width: 0px; height: 1.203em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>B</mi><mn>1</mn></msub><mo>,</mo><msub><mi>B</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>B</mi><mi>N</mi></msub></math></span></span><script type="math/tex" id="MathJax-Element-38">B_1, B_2, \ldots, B_N</script>.</li>
+</ul>
+                
+            
+            
+                
+                    <h3 class=" mathjax-support">Output Format</h3>
+                    <p class=" mathjax-support">For each query, print on a new line the maximum number of sweets Chef can buy.</p>
+                
+            
+            
+                
+                    <h3 class=" mathjax-support">Constraints</h3>
+                    <ul class=" mathjax-support">
+<li class=" mathjax-support"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-39-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mo&gt;&amp;#x22C5;&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-235" style="width: 7.926em; display: inline-block;"><span style="display: inline-block; position: relative; width: 6.505em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.15em, 1006.5em, 2.516em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-236"><span class="mn" id="MathJax-Span-237" style="font-family: MathJax_Main;">1</span><span class="mo" id="MathJax-Span-238" style="font-family: MathJax_Main; padding-left: 0.276em;">≤</span><span class="mi" id="MathJax-Span-239" style="font-family: MathJax_Math-italic; padding-left: 0.276em;">T<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.112em;"></span></span><span class="mo" id="MathJax-Span-240" style="font-family: MathJax_Main; padding-left: 0.276em;">≤</span><span class="mn" id="MathJax-Span-241" style="font-family: MathJax_Main; padding-left: 0.276em;">2</span><span class="mo" id="MathJax-Span-242" style="font-family: MathJax_Main; padding-left: 0.221em;">⋅</span><span class="msubsup" id="MathJax-Span-243" style="padding-left: 0.221em;"><span style="display: inline-block; position: relative; width: 1.423em; height: 0px;"><span style="position: absolute; clip: rect(3.172em, 1000.99em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mn" id="MathJax-Span-244" style="font-family: MathJax_Main;">10</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -4.369em; left: 0.986em;"><span class="mn" id="MathJax-Span-245" style="font-size: 70.7%; font-family: MathJax_Main;">5</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.337em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><mi>T</mi><mo>≤</mo><mn>2</mn><mo>⋅</mo><msup><mn>10</mn><mn>5</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-39">1 \le T \le 2 \cdot 10^5</script></li>
+<li class=" mathjax-support"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-40-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mo&gt;&amp;#x22C5;&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-246" style="width: 8.199em; display: inline-block;"><span style="display: inline-block; position: relative; width: 6.724em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.15em, 1006.72em, 2.516em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-247"><span class="mn" id="MathJax-Span-248" style="font-family: MathJax_Main;">1</span><span class="mo" id="MathJax-Span-249" style="font-family: MathJax_Main; padding-left: 0.276em;">≤</span><span class="mi" id="MathJax-Span-250" style="font-family: MathJax_Math-italic; padding-left: 0.276em;">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.112em;"></span></span><span class="mo" id="MathJax-Span-251" style="font-family: MathJax_Main; padding-left: 0.276em;">≤</span><span class="mn" id="MathJax-Span-252" style="font-family: MathJax_Main; padding-left: 0.276em;">2</span><span class="mo" id="MathJax-Span-253" style="font-family: MathJax_Main; padding-left: 0.221em;">⋅</span><span class="msubsup" id="MathJax-Span-254" style="padding-left: 0.221em;"><span style="display: inline-block; position: relative; width: 1.423em; height: 0px;"><span style="position: absolute; clip: rect(3.172em, 1000.99em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mn" id="MathJax-Span-255" style="font-family: MathJax_Main;">10</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -4.369em; left: 0.986em;"><span class="mn" id="MathJax-Span-256" style="font-size: 70.7%; font-family: MathJax_Main;">5</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.337em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><mi>N</mi><mo>≤</mo><mn>2</mn><mo>⋅</mo><msup><mn>10</mn><mn>5</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-40">1 \le N \le 2 \cdot 10^5</script></li>
+<li class=" mathjax-support"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-41-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;&amp;lt;&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;9&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-257" style="width: 9.893em; display: inline-block;"><span style="display: inline-block; position: relative; width: 8.09em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.15em, 1008.09em, 2.516em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-258"><span class="mn" id="MathJax-Span-259" style="font-family: MathJax_Main;">1</span><span class="mo" id="MathJax-Span-260" style="font-family: MathJax_Main; padding-left: 0.276em;">≤</span><span class="msubsup" id="MathJax-Span-261" style="padding-left: 0.276em;"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(3.172em, 1000.77em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-262" style="font-family: MathJax_Math-italic;">B</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -3.822em; left: 0.768em;"><span class="mi" id="MathJax-Span-263" style="font-size: 70.7%; font-family: MathJax_Math-italic;">i</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span><span class="mo" id="MathJax-Span-264" style="font-family: MathJax_Main; padding-left: 0.276em;">&lt;</span><span class="msubsup" id="MathJax-Span-265" style="padding-left: 0.276em;"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(3.117em, 1000.71em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-266" style="font-family: MathJax_Math-italic;">A</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -3.822em; left: 0.768em;"><span class="mi" id="MathJax-Span-267" style="font-size: 70.7%; font-family: MathJax_Math-italic;">i</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span><span class="mo" id="MathJax-Span-268" style="font-family: MathJax_Main; padding-left: 0.276em;">≤</span><span class="msubsup" id="MathJax-Span-269" style="padding-left: 0.276em;"><span style="display: inline-block; position: relative; width: 1.423em; height: 0px;"><span style="position: absolute; clip: rect(3.172em, 1000.99em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mn" id="MathJax-Span-270" style="font-family: MathJax_Main;">10</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -4.369em; left: 0.986em;"><span class="mn" id="MathJax-Span-271" style="font-size: 70.7%; font-family: MathJax_Main;">9</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.403em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><msub><mi>B</mi><mi>i</mi></msub><mo>&lt;</mo><msub><mi>A</mi><mi>i</mi></msub><mo>≤</mo><msup><mn>10</mn><mn>9</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-41">1 \le B_i < A_i \le 10^9</script></li>
+<li class=" mathjax-support"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-42-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;9&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-272" style="width: 6.56em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.358em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.15em, 1005.36em, 2.516em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-273"><span class="mn" id="MathJax-Span-274" style="font-family: MathJax_Main;">1</span><span class="mo" id="MathJax-Span-275" style="font-family: MathJax_Main; padding-left: 0.276em;">≤</span><span class="mi" id="MathJax-Span-276" style="font-family: MathJax_Math-italic; padding-left: 0.276em;">R</span><span class="mo" id="MathJax-Span-277" style="font-family: MathJax_Main; padding-left: 0.276em;">≤</span><span class="msubsup" id="MathJax-Span-278" style="padding-left: 0.276em;"><span style="display: inline-block; position: relative; width: 1.423em; height: 0px;"><span style="position: absolute; clip: rect(3.172em, 1000.99em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mn" id="MathJax-Span-279" style="font-family: MathJax_Main;">10</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -4.369em; left: 0.986em;"><span class="mn" id="MathJax-Span-280" style="font-size: 70.7%; font-family: MathJax_Main;">9</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.337em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><mi>R</mi><mo>≤</mo><msup><mn>10</mn><mn>9</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-42">1 \le R \leq 10^9</script></li>
+<li class=" mathjax-support">It is guaranteed that the sum of <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-43-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-281" style="width: 1.15em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.932em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1000.93em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-282"><span class="mi" id="MathJax-Span-283" style="font-family: MathJax_Math-italic;">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.112em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.937em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></span></span><script type="math/tex" id="MathJax-Element-43">N</script> over all test cases does not exceed <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-44-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mo&gt;&amp;#x22C5;&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-284" style="width: 3.227em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.626em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.15em, 1002.63em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-285"><span class="mn" id="MathJax-Span-286" style="font-family: MathJax_Main;">2</span><span class="mo" id="MathJax-Span-287" style="font-family: MathJax_Main; padding-left: 0.221em;">⋅</span><span class="msubsup" id="MathJax-Span-288" style="padding-left: 0.221em;"><span style="display: inline-block; position: relative; width: 1.423em; height: 0px;"><span style="position: absolute; clip: rect(3.172em, 1000.99em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mn" id="MathJax-Span-289" style="font-family: MathJax_Main;">10</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -4.369em; left: 0.986em;"><span class="mn" id="MathJax-Span-290" style="font-size: 70.7%; font-family: MathJax_Main;">5</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 1.203em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mo>⋅</mo><msup><mn>10</mn><mn>5</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-44">2 \cdot 10^5</script></li>
+</ul>
+                
+            
+            
+                
+            
+            
+                
+                    <h3 class=" mathjax-support">
+                        Sample Input 1
+                        <i title="Copy Sample Input" onclick="handleCopySampleTest(event)" data-copy-target-id="sample-input-1" data-bindattr-696="696" class="fa fa-copy test-case-copy-btn mathjax-support">
+                        </i>
+                        <i class="fa fa-check-circle test-case-copy-btn mathjax-support" style="display: none" id="sample-input-1-ticked" data-bindattr-697="697">
+                        </i>
+                    </h3>
+                    <span id="sample-input-1" data-bindattr-698="698" class=" mathjax-support">
+                        <pre class=" mathjax-support"><code class=" mathjax-support">3
+3 3
+2 3 4
+1 1 1
+2 4
+5 4
+1 2
+4 10
+4 4 5 5
+1 2 4 2
+</code></pre>
+                    </span>
+                
+                
+                    <h3 class=" mathjax-support">
+                        Sample Output 1
+                        <i title="Copy Sample Output" onclick="handleCopySampleTest(event)" data-copy-target-id="sample-output-1" data-bindattr-701="701" class="fa fa-copy test-case-copy-btn mathjax-support">
+                        </i>
+                        <i class="fa fa-check-circle test-case-copy-btn mathjax-support" style="display: none" id="sample-output-1-ticked" data-bindattr-702="702">
+                        </i>
+                    </h3>
+                    <span id="sample-output-1" data-bindattr-703="703" class=" mathjax-support">
+                        <pre class=" mathjax-support"><code class=" mathjax-support">2
+1
+7
+</code></pre>
+                    </span>
+                
+                
+                    <h3 class=" mathjax-support">Explanation</h3>
+                    <p class=" mathjax-support"><strong class=" mathjax-support">Test case <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-45-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-291" style="width: 0.604em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.495em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1000.44em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-292"><span class="mn" id="MathJax-Span-293" style="font-family: MathJax_Main;">1</span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.937em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-45">1</script>:</strong> Chef buys the first sweet, which costs <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-46-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-294" style="width: 0.604em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.495em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1000.44em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-295"><span class="mn" id="MathJax-Span-296" style="font-family: MathJax_Main;">2</span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.937em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math></span></span><script type="math/tex" id="MathJax-Element-46">2</script> rupees and has a cashback of <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-47-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-297" style="width: 0.604em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.495em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1000.44em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-298"><span class="mn" id="MathJax-Span-299" style="font-family: MathJax_Main;">1</span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.937em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-47">1</script> rupee. He now has <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-48-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-300" style="width: 7.107em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.795em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1005.74em, 2.462em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-301"><span class="mn" id="MathJax-Span-302" style="font-family: MathJax_Main;">3</span><span class="mo" id="MathJax-Span-303" style="font-family: MathJax_Main; padding-left: 0.221em;">−</span><span class="mn" id="MathJax-Span-304" style="font-family: MathJax_Main; padding-left: 0.221em;">2</span><span class="mo" id="MathJax-Span-305" style="font-family: MathJax_Main; padding-left: 0.221em;">+</span><span class="mn" id="MathJax-Span-306" style="font-family: MathJax_Main; padding-left: 0.221em;">1</span><span class="mo" id="MathJax-Span-307" style="font-family: MathJax_Main; padding-left: 0.276em;">=</span><span class="mn" id="MathJax-Span-308" style="font-family: MathJax_Main; padding-left: 0.276em;">2</span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.197em; border-left: 0px solid; width: 0px; height: 1.07em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn><mo>−</mo><mn>2</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></math></span></span><script type="math/tex" id="MathJax-Element-48">3 - 2 + 1 = 2</script> rupees remaining. He once again buys the first sweet, which leaves him with <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-49-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-309" style="width: 0.604em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.495em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1000.44em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-310"><span class="mn" id="MathJax-Span-311" style="font-family: MathJax_Main;">1</span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.937em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-49">1</script> rupee, at which point no more sweets can be bought.</p>
+<p class=" mathjax-support"><strong class=" mathjax-support">Test case <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-50-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-312" style="width: 0.604em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.495em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.369em, 1000.44em, 2.352em, -999.997em); top: -2.183em; left: 0em;"><span class="mrow" id="MathJax-Span-313"><span class="mn" id="MathJax-Span-314" style="font-family: MathJax_Main;">2</span></span><span style="display: inline-block; width: 0px; height: 2.189em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.937em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math></span></span><script type="math/tex" id="MathJax-Element-50">2</script>:</strong> Chef buys the second sweet once.</p>
+                
+            
+        
+
+        <!--.problem-statement-->
+
+        <aside class="problem-info mathjax-support">
+          
+          
+          <p class=" mathjax-support">
+            <label class=" mathjax-support">Author:</label>
+            <span class=" mathjax-support"><a href="https://www.codechef.com/users/yash5507" data-bindattr-706="706" class=" mathjax-support"><span class="rating mathjax-support" style="display: inline-block; 
+                    font-size: 10px; 
+                    background: #FFBF00;
+                    padding: 0 3px; 
+                    line-height: 1.3; 
+                    color: white;
+                    margin-right: 2px;">5★</span><span class="m-username--link mathjax-support">yash5507</span></a></span>
+          </p>
+           
+           
+              <p class=" mathjax-support">
+                <label class=" mathjax-support">Editorial:</label>
+                <span class=" mathjax-support"><a href="https://discuss.codechef.com/problems/BUYSWEET" data-bindattr-708="708" class=" mathjax-support">https://discuss.codechef.com/problems/BUYSWEET</a></span>
+              </p>
+          
+          
+             <p class=" mathjax-support">
+               <label class=" mathjax-support">Tags:</label>
+               <span class=" mathjax-support">
+               
+                 Tags are hidden. <a data-ember-action="710" class=" mathjax-support">Show temporarily</a>
+               
+             
+                <hr style="margin-top: 5px; margin-bottom: 5px;" class=" mathjax-support">
+                <p class=" mathjax-support">
+                    
+                        Update this setting in
+                    
+                    <a href="https://www.codechef.com/users/sandeep_1248/edit#additional_info" target="_blank" class=" mathjax-support">edit profile</a>
+                </p>
+                
+             
+             </span></p>
+          
+          
+              <p class=" mathjax-support">
+               <label class=" mathjax-support">
+                    <a target="_blank" href="https://blog.codechef.com/2022/02/25/exciting-updates-for-february-2022" class=" mathjax-support">
+                        Difficulty Rating:
+                    </a>
+               </label>
+                <span class=" mathjax-support">1706</span>
+              </p>
+          
+          
+          <p class=" mathjax-support">
+            <label class=" mathjax-support">Date Added:</label>
+            <span class=" mathjax-support">23-04-2022</span>
+          </p>
+          
+          <p class=" mathjax-support">
+            <label class=" mathjax-support">Time Limit:</label>
+            <span class=" mathjax-support">1 secs</span>
+          </p>
+          <p class=" mathjax-support">
+            <label class=" mathjax-support">Source Limit:</label>
+            <span class=" mathjax-support">50000 Bytes</span>
+          </p>
+          <p class=" mathjax-support">
+            <label class=" mathjax-support">Languages:</label>
+            <span class=" mathjax-support">CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM</span>
+          </p>
+        </aside>
+        <!--.problem-info-->
+
+        <div class="text-center mathjax-support">
+          <input type="hidden" data-bindattr-691="691" class=" mathjax-support">
+          
+          
+          <a class="button blue mathjax-support" href="https://www.codechef.com/submit/BUYSWEET" data-bindattr-714="714" style="padding:0.4rem 1.5rem 0.425rem;">Submit (Practice)</a>
+          
+          
+          </div>
+        </div>
+
+      </section>
+      <!--.content-area-->
+
+      <aside class="sidebar small-4 columns pr0 pt0">
+        <div id="timer" class="widget pl0 pr0 seperate cc-hidden" data-bindattr-670="670">
+          undefined
+          <div id="contest-ended"></div>
+        </div>
+        <div class="button-submissions">
+          
+          <a class="button grey" href="https://www.codechef.com/START36A/status/BUYSWEET,sandeep_1248" data-bindattr-715="715">My Solutions</a>
+          <a class="button grey" href="https://www.codechef.com/START36A/status/BUYSWEET" data-bindattr-716="716">Other’s Solutions</a>
+          
+        </div>
+
+        <div class="successful-submissions widget pb0">
+          <div>
+            <h5 data-ember-action="672"> Successful Solutions
+            <button class="button grey toogle-button fa fa-plus" data-bindattr-673="673"></button>
+            </h5>
+          </div>
+          <div class="content table-component">
+            <div id="rankContentDiv"></div>
+          </div>
+        </div>
+        <div id="problemManageURL" class="widget seperate cc-hidden" data-bindattr-674="674">
+            <h4>Manage</h4><br>
+            <a class="button fnone blue" data-bindattr-675="675">Manage Problem</a>
+        </div>
+        
+             <div class="widget seperate">
+                 <h4>Video Solution<sup class="new-highlight">New!</sup></h4>
+                 <p class="para-text">
+                    Tried this problem but couldn't solve it? Check the detailed explanation by our expert
+                    educators.
+                 </p>
+                  <div class="iframe-container">
+                       <iframe width="560" height="315" src="./Buying Sweets _ CodeChef_files/NvtAbRYRqwo.html" data-bindattr-717="717" "="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+                       picture-in-picture" allowfullscreen=""></iframe>
+                 </div>
+              </div>
+         
+         
+             <a href="https://certifications.codechef.com/data-structures-and-algorithms?itm_medium=internal-banner&amp;itm_campaign=ccdsa" class="widget seperate special-block cursor-pointer" target="_blank"><div><img class="special-block-img-container" src="./Buying Sweets _ CodeChef_files/1651037891.png"></div></a>         
+         <div id="problemDiscussURL" class="widget seperate cc-visible" data-bindattr-676="676">
+            <h4>Discussions</h4><br>
+            <p class="para-text discussions-box-padding">
+                See all discussions related to this problem on the discussion forum.
+            </p>
+            <a class="button fnone blue" href="https://discuss.codechef.com/search?q=BUYSWEET" data-bindattr-677="677" target="_blank">See Discussions</a>
+        </div>
+      </aside>
+      <!--.sidebar-->
+
+      <section class="comments" id="problem-comments">
+        <div class="row collapse">
+          <div class="large-12 columns">
+             <div id="ember718" class="ember-view"><section class="cc-comments-section"><div class="comment-topmost-header"><h2 class="noselect cc-comments-title" data-ember-action="719">Comments <i class="fa fa-caret-right"></i></h2></div></section></div> 
+          </div>
+        </div>
+      </section>
+      <!--.comments-->
+
+      
+    </main>
+    <!--.problem-container-->
+  </div>
+  </div></div>
+<script type="text/javascript">
+    String.prototype.capitalize = function () {
+        return this.charAt(0).toUpperCase() + this.slice(1);
+    };
+
+    disconnectOauth = function (event, account, username) {
+        if (event != undefined) {
+            event.preventDefault();
+        }
+        disconnect = () => {
+            window.localStorage.clear();
+            $.ajax({
+                url: '/OAuth/' + account,
+                type: 'DELETE',
+                headers: {'x-csrf-token': window.csrfToken},
+                success: function () {
+                    window.location.reload();
+                },
+                error: function () {
+                    invokeGenericModal({
+                        message: "Couldn't complete your request. Please try again.",
+                        id: account + '-error-message'
+                    });
+                }
+            });
+        }
+        showDrupalConfirmBox(`Are you sure you want to disconnect ${account.capitalize()} account? <br /><br />
+            For hassle free login, please make sure you have
+            <a href='/users/${username}/edit#login_info' style='text-decoration: underline'> set a password</a>
+            before disconnecting.`,
+            disconnect
+        );
+    };
+
+    connectOauth = function (event, url) {
+        if (event != undefined) {
+            event.preventDefault();
+        }
+        window.localStorage.clear();
+        cAjax({
+            url: url,
+            type: 'POST',
+            success: function (res) {
+                if (res.url) {
+                    window.location.href = res.url;
+                }
+            },
+            error: function (err) {
+                invokeGenericModal({
+                    areAllAllowed: true,
+                    message: err.message || "Couldn't complete your request. Please try again.",
+                    id: 'oauth-connect-error-message'
+                });
+            }
+        });
+    };
+</script>
+        <script type="text/javascript" async="" src="./Buying Sweets _ CodeChef_files/webengage-min-v-6.0.js"></script><script id="_webengage_script_tag" type="text/javascript">
+            var webengage;!function(w,e,b,n,g){function o(e,t){e[t[t.length-1]]=function(){r.__queue.push([t.join("."),
+                arguments])}}var i,s,r=w[b],z=" ",l="init options track screen onReady".split(z),a="feedback survey notification".split(z),c="options render clear abort".split(z),p="Open Close Submit Complete View Click".split(z),u="identify login logout setAttribute".split(z);if(!r||!r.__v){for(w[b]=r={__queue:[],__v:"6.0",user:{}},i=0;i < l.length;i++)o(r,[l[i]]);for(i=0;i < a.length;i++){for(r[a[i]]={},s=0;s < c.length;s++)o(r[a[i]],[a[i],c[s]]);for(s=0;s < p.length;s++)o(r[a[i]],[a[i],"on"+p[s]])}for(i=0;i < u.length;i++)o(r.user,["user",u[i]]);setTimeout(function(){var f=e.createElement("script"),d=e.getElementById("_webengage_script_tag");f.type="text/javascript",f.async=!0,f.src=("https:"==e.location.protocol?"https://ssl.widgets.webengage.com":"http://cdn.widgets.webengage.com")+"/js/webengage-min-v-6.0.js",d.parentNode.insertBefore(f,d)})}}(window,document,"webengage");webengage.init("~7168057d");
+        </script>
+<footer class="l-footer">
+            <div class="l-footer__content m-footer__content">
+                <div class="l-footer__text">
+                    <span class="m-footer__text">Important Links of our resources &amp; information -</span>
+                </div>
+                <div class="l-footer__links"><div class="l-footer__column"><div class="l-footer__head"><p class="m-footer__head">Programming Tools</p></div><div class="l-footer__list"><div class="l-footer__link"><a href="https://www.codechef.com/ide" class="m-footer__link">Online IDE</a></div><div class="l-footer__link"><a href="https://www.codechef.com/contests#future-contests" class="m-footer__link">Upcoming Coding Contests</a></div><div class="l-footer__link"><a href="https://certifications.codechef.com/" class="m-footer__link">CodeChef Certifications</a></div><div class="l-footer__link"><a href="https://www.codechef.com/hostyourcontest" class="m-footer__link">Host Your Contest</a></div><div class="l-footer__link"><a href="https://www.codechef.com/problemsetting" class="m-footer__link">Problem Setting</a></div></div></div><div class="l-footer__column"><div class="l-footer__head"><p class="m-footer__head">Learning Resources</p></div><div class="l-footer__list"><div class="l-footer__link"><a href="https://www.codechef.com/getting-started" class="m-footer__link">Getting Started</a></div><div class="l-footer__link"><a href="https://www.codechef.com/practice" class="m-footer__link">Practice Problems</a></div><div class="l-footer__link"><a href="https://www.codechef.com/certification/data-structures-and-algorithms/prepare" class="m-footer__link">Prepare for DSA Certification</a></div><div class="l-footer__link"><a href="https://discuss.codechef.com/" class="m-footer__link">CodeChef Discuss</a></div><div class="l-footer__link"><a href="https://www.codechef.com/wiki/tutorials" class="m-footer__link">CodeChef Tutorials</a></div></div></div><div class="l-footer__column"><div class="l-footer__head"><p class="m-footer__head">Initiatives</p></div><div class="l-footer__list"><div class="l-footer__link"><a href="https://www.codechef.com/goforgold" class="m-footer__link">Go for Gold</a></div><div class="l-footer__link"><a href="https://www.codechef.com/school" class="m-footer__link">CodeChef for Schools</a></div><div class="l-footer__link"><a href="https://www.codechef.com/college-chapter/about" class="m-footer__link">College Chapters</a></div><div class="l-footer__link"><a href="https://goodies.codechef.com/" class="m-footer__link">CodeChef Goodies</a></div></div></div><div class="l-footer__column"><div class="l-footer__head"><p class="m-footer__head">More</p></div><div class="l-footer__list"><div class="l-footer__link"><a href="https://business.codechef.com/" class="m-footer__link">CodeChef For Business</a></div><div class="l-footer__link"><a href="https://www.codechef.com/contactus" class="m-footer__link">Contact Us</a></div><div class="l-footer__link"><a href="https://www.codechef.com/codeofconduct" class="m-footer__link">Code Of Conduct</a></div><div class="l-footer__link"><a href="https://www.codechef.com/rankings" class="m-footer__link">User Ranklist</a></div><div class="l-footer__link"><a href="https://codechef.releases.live/" class="m-footer__link">Release Notes</a></div><div class="l-footer__link"><a href="https://www.codechef.com/privacy-policy" class="m-footer__link">Privacy policy</a></div><div class="l-footer__link"><a href="https://www.codechef.com/terms" class="m-footer__link">Terms</a></div></div></div></div>
+            </div>
+            <div class="l-footer__social">
+                <div class="m-footer__social">
+                    <div class="l-footer__site">
+                        <a href="https://www.codechef.com/" class="m-footer__site is-link-hovered ">www.codechef.com</a>
+                    </div>
+                    <div class="l-footer__follow-sec">
+                        <div class="l-footer__follow">
+                            <span class="m-footer__follow">Follow Us</span>
+                        </div>
+                        <div class="l-footer__icons"><a class="m-social i-youtube" href="https://youtube.com/c/codechef1"></a><a class="m-social i-telegram" href="https://t.me/learncpwithcodechef"></a><a class="m-social i-facebook" href="https://facebook.com/CodeChef"></a><a class="m-social i-instagram" href="https://instagram.com/codechef"></a><a class="m-social i-twitter" href="https://twitter.com/codechef"></a><a class="m-social i-medium" href="https://medium.com/codechef-official"></a><a class="m-social i-quora" href="https://quora.com/topic/CodeChef"></a><a class="m-social i-linkedin" href="https://linkedin.com/company/codechef"></a></div>
+                    </div>
+                </div>
+           </div>
+        </footer><div id="gdpr-cookie-notif" class="global--announcement" style="display: none;">
+                <div class="global--announcement__content">
+                    <p>
+                        We use cookies to improve your experience and for analytical purposes.
+                        Read our <a href="https://www.codechef.com/privacy-policy">Privacy Policy</a>
+                        and <a href="https://www.codechef.com/terms">Terms</a> to know more.
+                        You consent to our cookies if you continue to use our website.
+                    </p>
+                </div>
+                <div class="global--announcement__action">
+                    <button id="gdpr-i-love-cookies" class="button grey tiny">Okay</button>
+                </div>
+            </div><script>
+  var sscache = {};
+
+  function getPage(url, data, page) {
+    var cacheId = url + JSON.stringify(data);
+    var cache = sscache;
+    var success = function (data) {
+      cache[cacheId] = data;
+      $('#rankContentDiv').html(data['content']);
+      var newpage = page === undefined ? 1 : (parseInt(page) + 1);
+      var pageinfo = "<div align='center' class='pageinfo'> - </div>";
+      if (data['max_page'] > 0) {
+        pageinfo = "<div align='center' class='pageinfo'>" + newpage + " of " + data['max_page'] + "</div>";
+      }
+      $("#loader").html(pageinfo);
+
+    };
+
+    var error = function (request, errorType) {
+      try {
+        if (page === undefined) {
+          retryButton = '<input id="retryButton" type="button" value="Retry"/>';
+            $('#rankContentDiv').html(retryButton);
+            $('#retryButton').click(function () {
+                $('#rankContentDiv').html('<p align="center"><img src="https://cdn.codechef.com/sites/all/themes/abessive/images/ajax-loader.gif" /> Fetching content</p>');
+                getPage(url, data, page);
+            })
+        } else {
+          $("#loader").html("Oops! It couldn't load. Try again.");
+        }
+      } catch (e) {
+      }
+    };
+
+    if (cache.hasOwnProperty(cacheId)) {
+      success(cache[cacheId]);
+      return;
+    }
+
+    cAjax({
+      url: url,
+      type: "GET",
+      data: data,
+      cache: false,
+      timeout: 10000,
+      dataType: "json",
+      success: success,
+      error: error
+    });
+
+  }
+
+
+  function set_page(element) {
+    var page;
+
+    if (element == "prev")
+      page = $("#prev_p").val();
+    else if (element == "next")
+      page = $("#next_p").val();
+
+    return page;
+  }
+
+  function onload_getpage_ssubmissions(element) {
+    $('#loader').html('<p><img src="https://cdn.codechef.com/misc/ajax_loader_d.gif" style="width: 120px; height:15px;"/></p>');
+    var contest = "";
+    if ($("#ccode").length != 0) {
+      contest = '&ccode=' + $("#ccode").val();
+    }
+
+    var page = set_page(element);
+    var data = "page=" + page + "&pcode=" + $("#pcode").val() + contest;
+    var url = "/ssubmission/prob";
+    getPage(url, data, page);
+  }
+</script>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","2444182835820350");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2444182835820350&amp;ev=PageView&amp;noscript=1"></noscript>
+
+
+<script type="text/javascript" id="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g;d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","3wyy3fxv0y");</script><style>
+  ins.adsbygoogle[data-ad-status="unfilled"] {
+    display: none !important;
+  }
+</style>
+<script type="text/javascript" id="" src="./Buying Sweets _ CodeChef_files/f.txt"></script>
+
+
+
+
+<div class="campaign-visibility"><style>
+    .snackdown-bar{    
+    width: 970px;
+    margin: 0 auto 7px;
+    height: 40px;
+    position: relative;
+    top: 104px;
+    margin-top: 12px;
+  }
+  .snackdown-bar *{
+    box-sizing: border-box;
+  }</style>
+<div class="snackdown-bar" style="display: none;"><a target="_blank" id="ccdsap" href="https://www.codechef.com/learning?itm_medium=top-strip&amp;itm_campaign=mentored-learning"><img src="./Buying Sweets _ CodeChef_files/bootcamp-strip-04.png" usemap="#image-map" style="width:968px; margin:15px 0;box-shadow:0 3px 6px 0px rgba(0,0,0,0.2);"></a></div>
+<div id="certification" class="widget seperate" data-bindattr-314="314" style="background: cornsilk; display: none; ">      <h4>CodeChef YouTube</h4>       <a target="_blank" href="https://www.codechef.com/learning?itm_medium=adstrip&amp;itm_campaign=mentored-learning" data-bindattr-315="315" class="button blue fnone" style="background: brown;">Know more</a></div>
+
+    <script>
+$(document).ready(function () {
+    var url_parts = window.location.pathname.split('/');
+    var hostname = window.location.hostname;
+    var invalid_pages = ['SNCK','admin','signup','login','verify','authorize','password','getting-started','hostyourcontest','mashup','FLOW001','jobs','bootcamp','jobs-','node','contribute','work','learn','rankings','contactus','initiatives','certification','wiki','ratings','youtube','doubt'];
+    var is_valid_page = true;
+
+    is_valid_page = is_valid_page && !(window.location.pathname == '/');
+    for (var i = 0; i< invalid_pages.length; i++){
+        is_valid_page = is_valid_page && !window.location.href.includes(invalid_pages[i]);
+    }
+    var rated_contests = ['DEC21', 'COOK', 'LTIME', 'START', 'NIUM'];
+    for (var i = 0; i< rated_contests.length; i++){
+        is_valid_page = is_valid_page && !window.location.href.includes(rated_contests[i]);
+    }
+
+    var is_nextgen_hackathon = (url_parts.length >= 2 && url_parts[1] == 'TMHA2020');
+ 
+    function injectStyles(rule) {
+      var div = $('<div ></div>', {
+        html: '&shy;<style>' + rule + '</style>'
+       }).appendTo('body');    
+     }
+     
+     function hide_submission_count_accuracy(){          
+           injectStyles('.dataTable>thead>tr>th:nth-child(4){display:none;}');
+           injectStyles('.dataTable>thead>tr>th:nth-child(3){display:none;}');
+           injectStyles('.dataTable>tbody>tr>td:nth-child(4){display:none;}');
+           injectStyles('.dataTable>tbody>tr>td:nth-child(3){display:none;}');
+     }
+
+     if(is_nextgen_hackathon){
+           hide_submission_count_accuracy();
+     }
+
+    
+   //(url_parts.length >= 2 && url_parts[1] == 'certification') || //certification page                  
+   //console.log(is_valid_page);
+   //(url_parts.length >= 2 && (url_parts[1] == 'node' || url_parts[1].trim() == '')) || //home page
+
+    if (is_valid_page) {
+        if ($('.header-container').length) {
+            $($('.snackdown-bar')).insertAfter($('.header-container'));
+        } else if ($('header.site').length) {
+            $($('.snackdown-bar')).insertAfter($('header.site'));
+            $('.snackdown-bar').css('top', '-15px');
+            $('.snackdown-bar').css('width', '964px');
+            $('.snackdown-bar > ul > li').css('top', '-3px');
+        }
+        $('#certification').hide();
+    }else{
+         $('.snackdown-bar').hide();
+         if(url_parts.length == 2 && url_parts[1] == 'DI17R143'){                
+                     showCCDSAPWidget();
+          }
+    }
+    
+    function showCCDSAPWidget(){
+        if($('#timer').length){
+            $('#certification').show();
+            $($('#certification')).insertBefore('#timer');
+        }else{
+           setTimeout(showCCDSAPWidget, 2000);
+        }
+    }
+});
+    </script>
+    </div><webengagedata><style type="text/css">#webklipper-publisher-widget-container, #webklipper-publisher-widget-container * {overflow:visible; -webkit-box-sizing: content-box; -moz-box-sizing: content-box;  box-sizing: content-box; margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}</style><div id="webklipper-publisher-widget-container"><iframe title="webengage-engagement-callback-frame" name="webengage-engagement-callback-frame" id="webengage-engagement-callback-frame" frameborder="0" marginheight="0" marginwidth="0" style="position: absolute; background-color: transparent; bottom: 0px; right: 0px; border: none; overflow: hidden; visibility: hidden; display: none;" src="./Buying Sweets _ CodeChef_files/saved_resource.html"></iframe><iframe title="_we_wk_data_store" name="_we_wk_data_store" id="_we_wk_data_store" frameborder="0" marginheight="0" marginwidth="0" src="./Buying Sweets _ CodeChef_files/storage-frame-1.18.html" style="position: absolute; background-color: transparent; bottom: 0px; right: 0px; border: none; overflow: hidden; visibility: hidden; display: none;"></iframe><script type="text/javascript" charset="UTF-8" async="" src="./Buying Sweets _ CodeChef_files/conversion.js"></script></div></webengagedata><div style="top: 0px; left: 0px; position: fixed; display: none; place-items: center; height: 100vh; width: 100vw; z-index: 10000; line-height: 1.5; font-size: 16px; backdrop-filter: blur(2px); background: rgba(0, 0, 0, 0.1); box-sizing: border-box;"></div><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; min-width: 0px; max-width: none; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
