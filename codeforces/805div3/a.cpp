@@ -1,6 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
+
+int nearest10power(int n){
+	int k = 0;
+	while(n >= 10){
+		n=n/10;
+		k++;
+	}
+	return (int)pow(10,k);
+}
+
 int main(){
 	ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -8,13 +17,6 @@ int main(){
 	cin>>T;
 	while(T--){
 		int n; cin>>n;
-		multiset<int> s;
-		int x, max = 0;
-		while(n--){
-			cin>>x;
-			max+=distance(s.lower_bound(x),s.end());
-			s.insert(x);
-		}
-		cout<<max<<endl;
+		cout<<n-nearest10power(n)<<endl;
 	}
 }
