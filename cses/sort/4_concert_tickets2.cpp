@@ -10,10 +10,10 @@ int main(){
     multiset<int>::iterator i;
     while(nc--){
         cin>>x;
-        i = t.lower_bound(x);
-        if (i == t.end()) cout<<-1<<"\n";
+        i = t.upper_bound(x);
+        if (i == t.begin()) cout<<-1<<"\n";
         else{
-            cout<<*i<<"\n";
+            cout<<*(--i)<<"\n";
             t.erase(i);
         }
     }
