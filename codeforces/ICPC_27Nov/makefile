@@ -3,7 +3,7 @@ CC=g++
 all: exec in.txt
 	./exec < in.txt
 
-exec: array_manipulation_fast.cpp
+exec: m.cpp
 	$(CC) -std=c++17 -Wall $^ -o $@
 
 in.txt:

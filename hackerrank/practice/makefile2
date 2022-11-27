@@ -1,13 +1,13 @@
 CC=g++
 
-all: exec in.txt
-	./exec < in.txt
+all: exec2 in.txt
+	./exec2 < in.txt
 
-exec: array_manipulation_fast.cpp
+exec2: array_manipulation_slow.cpp
 	$(CC) -std=c++17 -Wall $^ -o $@
 
 in.txt:
 	touch in.txt && echo "0" > in.txt
 
 clean:
-	rm exec in.txt
+	rm exec2 in.txt
