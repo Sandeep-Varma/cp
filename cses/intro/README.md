@@ -91,3 +91,48 @@ From this, we conclude that, (2b-a)%3 == 0 and (2b-a) >= 0 are the two condition
 Count the number of times each character appears in the string. Atmost only one of these characters can appear odd number of times else there is no solution. Now, when there is a solution, just put the character which has been there odd number of times at the centre and put the remaining characters on both sides.
 
 #
+
+## Gray Code
+
+Start with 0 (i.e., n digits of zero). For the remaining 2<sup>n</sup>-1 bitstrings, put a loop.
+Before printing the n<sup>th</sup> bitstring, find the least significant true bit in n and flip that bit in our bitstring. In this way, we are changing only one bit each time and cover all n digit bitstrings.
+
+#
+
+## Tower of Hanoi
+
+When there, are three stacks s1,s2,s3 and n disks initially on s1 and all of them needed to be shifted to s3 without placing a larger disk on a smaller disk. Use recursion.<br/>
+Base case: When there is only one disk, move it directly from s1 to s3.<br/>
+Recursion: When there are n disks, move the top n-1 disks from s1 to s2 using recursion. Then, move the last disk directly from s1 to s3. Finally, move the top n-1 disks from s2 to s3 using recursion.
+
+#
+
+## Creating Strings
+
+Permutate recursively choosing each possible character at each position recursively.
+
+#
+
+## Apple Division
+
+Use subset sum approach.
+
+#
+
+## Chessboard and Queens
+
+We know that each row must have exactly one queen. Now, use recursions, each time placing a queen at all free positions in the next row and call the function recursively in each possibility.
+
+#
+
+## Digit Queries
+
+Use iteration and try to find the number of digits in the number whose digit you want to guess. Use the logic that all n digit numbers occupy 9*10<sup>n-1</sup>*n. Then find the number using the logic that k<sup>th</sup> n digit number would be 10<sup>n-1</sup>+n-1. Then find which digit you want an get it.
+
+#
+
+## Grid Paths
+
+Not solved yet.
+
+#
