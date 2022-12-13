@@ -1,0 +1,13 @@
+CC=g++
+
+all: exec2 in.txt
+	./exec2 < in.txt
+
+exec2: SUMOFCUBE2.cpp
+	$(CC) -std=c++17 -Wall $^ -o $@
+
+in.txt:
+	touch in.txt && echo "0" > in.txt
+
+clean:
+	rm exec2 in.txt
