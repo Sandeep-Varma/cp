@@ -3,7 +3,7 @@ using namespace std;
 #define ll long long
 
 int func(vector<int> &v, int i, int j){
-    if (j-i == 1) return ((ll)pow(v[i],3))%998244353;
+    if (j-i == 1) return ((((ll)pow(v[i],2))%998244353)*v[i])%998244353;
     int k = (i+j+1)/2;
     ll ans1 = func(v,i,k);
     ll ans2 = func(v,k,j);

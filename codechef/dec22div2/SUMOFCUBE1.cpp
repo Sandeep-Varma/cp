@@ -12,7 +12,7 @@ int main(){
 		ll ans = 0;
 		for (int i=0; i<n; i++){
 			cin>>a[i][i];
-			ans = (ans + (ll)pow(a[i][i],3))%998244353;
+			ans = (ans + ((((ll)pow(a[i][i],2))%998244353)*a[i][i])%998244353)%998244353;
 		}
 		for (int l = 2; l<=n; l++){
 			for (int i=0; i<n-l+1; i++){
