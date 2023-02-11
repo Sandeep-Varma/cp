@@ -3,7 +3,7 @@ CC=g++
 all: exec in.txt
 	./exec < in.txt
 
-exec: common_child.cpp
+exec: longest_inc_subarray.cpp
 	$(CC) -std=c++17 -Wall $^ -o $@
 
 in.txt:
