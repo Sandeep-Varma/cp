@@ -3,7 +3,7 @@ CC=g++
 all: exec in.txt
 	./exec < in.txt
 
-exec: d.cpp
+exec: d_faster.cpp
 	$(CC) -std=c++17 -Wall $^ -o $@
 
 in.txt:
