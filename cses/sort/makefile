@@ -3,7 +3,7 @@ CC=g++
 all: exec in.txt
 	./exec < in.txt
 
-exec: 18_nested_ranges.cpp
+exec: 18_nested_ranges_check.cpp
 	$(CC) $^ -o $@
 
 in.txt:

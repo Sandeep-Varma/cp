@@ -1,20 +1,15 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
 	int n; cin>>n;
-	vector<int> a;
-	int x;
-	for (int i=0; i<n; i++){ cin>>x; a.push_back(x);}
-	int r = 0;
-	x = 1;
-	// for (int i=0; i<a.size(); i++){ cout<<a[i]<<" ";} cout<<endl;
-	while(++r){
-		for (int i=0; i<a.size(); i++){ if (a[i] == x){ x++; a.erase(a.begin()+i); i--;}}
-		// for (int i=0; i<a.size(); i++){ cout<<a[i]<<" ";} cout<<endl;
-		cout<<r<<endl;
-		if (x == n+1) break;
+	vector<int> p(n+1);
+	p[0] = INT_MAX;
+	for (int i=1; i<=n; i++){
+		int x; cin>>x;
+		p[x] = i;
 	}
-	cout<<r<<endl;
+	int ans = 0;
+	for (int i=1; i<=n; i++) if (p[i] < p[i-1]) ans++;
+	cout<<ans<<endl;
 }

@@ -1,23 +1,21 @@
-#include <iostream>
-#include <map>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
 	int n; cin>>n;
-	map<int,int> M;
+	set<pair<int,int>> s;
 	int x,y;
 	for (int i=0; i<n; i++){
 		cin>>x>>y;
-		M[y] = x;
+		s.insert({y,-x});
 	}
-	auto i = M.begin();
-	int time = i->first;
-	int count = 1;
-	while(++i!=M.end()){
-		if (time <= i->second){
-			count++;
-			time = i->first;
+	int ans = 0;
+	int time = 0;
+	for (auto m: s){
+		if (m.second*-1 >= time){
+			ans++;
+			time = m.first;
 		}
 	}
-	cout<<count<<endl;
+	cout<<ans<<endl;
 }

@@ -14,3 +14,8 @@ Sort the list of weights of children. Now take the leftmost and rightmost i.e., 
 
 ## Concert Tickets
 
+###############
+
+## Josephus II
+
+advance() function is O(n) for a set
